@@ -1,74 +1,28 @@
+"use client"
 import Image from "next/image";
-import { Navbar } from "../../components/navbar";
-import {HeroSection } from "../../components/herosection";
-import {SignUp} from "../../components/signup";
-import {Login} from "../../components/login";
-import {MultiModalServer} from "../../app/components/multimodal-server";
-import {MultiModalClient} from "../../app/componenets/multimodal-client";
-import {RealTimeTranslation} from "../../app/componenets/realtimetranslation";
-import {Dashboard } from "../../components/dashboard";
-import {AccessibilitySettings} from "../../components/accessibilitysettings";
-import {AssistiveTechnologiesIntegration} from "../../components/assistivetechnologiesintegration";
-import {CommunityEngagement} from "../../components/eommunityengagemen";
-import {EducationalResources} from "../../components/educationalresources";
-import {UserSupport} from "../../components/usersupport";
-import {PrivacyAndSecurity} from "../../components/privacyandsecurity";
-import {FeedbackMechanisms} from "../../components/feedbackmechanisms";
+import Navbar from "@/componenets/navbar";
+import HeroSection from "@/componenets/herosection";
+import React from 'react'
+
+// import MultiModalClientfrom
+// import RealTimeTranslationfrom
+
+// import AccessibilitySettingsfrom "../../components/accessibilitysettings";
+// import AssistiveTechnologiesIntegrationfrom "../../components/assistivetechnologiesintegration";
+// import CommunityEngagementfrom "../../components/eommunityengagemen";
+// import EducationalResourcesfrom "../../components/educationalresources";
+// import UserSupportfrom "../../components/usersupport";
+// import PrivacyAndSecurityfrom "../../components/privacyandsecurity";
+// import FeedbackMechanismsfrom "../../components/feedbackmechanisms";
 
 
 
-
-
-export default function Home() {
+const page = () => {
   return (
     <div>
-      {/* NAVBAR SECTION BELOW */}
-      <Navbar />
-
-      {/* HEROSECTION SECTION BELOW */}
-      <HeroSection />
-
-      {/* SIGNUP SECTION BELOW */}
-      <SignUp />
-
-      {/* LOGIN SECTION BELOW */}
-       <Login>
-
-      {/* MULTIMODALSERVER SECTION BELOW */}
-      <MultiModalServer />
-     
-      {/* MULTIMODALCLIENT SECTION BELOW */}
-      <MultiModalClient />
-
-      {/* DASHBOARD SECTION BELOW */}
-      <Dashboard />
-
-      {/* REALTIMETRANSLATION SECTION BELOW */}
-      <RealTimeTranslation/>
-
-      {/* ACCESSIBILITYSETTINGS SECTION BELOW */}
-      <AccessibilitySettings/>
-      
-      {/* ASSISTIVETECHNOLOGYINTEGRATION SECTION BELOW */}
-      <AssistiveTechnologiesIntegration/>
-     
-      {/* COMMUNITYENGAGEMENT SECTION BELOW */}
-      <CommunityEngagemen/>
-
-      {/* EDUCATIONALRESOURCES SECTION BELOW */}
-      <EducationalResources/>
-
-      {/* USERSUPPORT SECTION BELOW */}
-      <UserSupport/>
-
-      {/* COMMUNITYENGAGEMENT SECTION BELOW */}
-      <CommunityEngagemen/>
-   
-      {/* PRIVACYANDSECURITY SECTION BELOW */}
-      <PrivacyAndSecurity/>
-
-      {/* FEEDBACKMECHANISM SECTION BELOW */}
-      <FeedbackMechanisms/>
+      <h1 className="text blue text-[6em] items-center flex m-auto text-center ">this is the landing page</h1>
     </div>
-  );
+  )
 }
+
+export default page
