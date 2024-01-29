@@ -1,20 +1,22 @@
 // pages/multimodal-client.tsx
-import React from "react";
+import React, { useState } from "react";
+import { FiMic, FiVideo } from "react-icons/fi"; // Import icons from react-icons library
 
 const MultiModalClient: React.FC = () => {
-  let messageInput = "";
-  let isVideoEnabled = false;
-  let isAudioEnabled = false;
+  const [isVideoEnabled, setIsVideoEnabled] = useState(false);
+  const [isAudioEnabled, setIsAudioEnabled] = useState(false);
 
   const handleSendMessage = () => {
     // Your message sending logic here
   };
 
   const handleToggleVideo = () => {
+    setIsVideoEnabled((prev) => !prev);
     // Your video toggle logic here
   };
 
   const handleToggleAudio = () => {
+    setIsAudioEnabled((prev) => !prev);
     // Your audio toggle logic here
   };
 
@@ -31,6 +33,7 @@ const MultiModalClient: React.FC = () => {
           }`}
           disabled={!isAudioEnabled}
         >
+          <FiMic size={20} className="mr-2" />
           {isAudioEnabled ? "Disable Audio" : "Audio Disabled"}
         </button>
         <button
@@ -42,6 +45,7 @@ const MultiModalClient: React.FC = () => {
           }`}
           disabled={!isVideoEnabled}
         >
+          <FiVideo size={20} className="mr-2" />
           {isVideoEnabled ? "Disable Video" : "Video Disabled"}
         </button>
       </section>
