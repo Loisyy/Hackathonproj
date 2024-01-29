@@ -1,10 +1,12 @@
 // pages/dashboard.tsx
 import React from "react";
+import Navbar from "@/componenets/navbar";
 
 const Dashboard: React.FC = () => {
   return (
     <div className="container mx-auto mt-8 p-8 bg-white shadow-lg rounded-md">
       {/* Overview Section */}
+      <Navbar />
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Overview</h2>
         <div className="flex justify-between">
