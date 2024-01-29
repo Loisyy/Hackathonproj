@@ -19,23 +19,23 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className="bg-deep-purple-500 text-light-gray-100 p-8">
+    <div className="bg-deepPurple text-lightGray p-8">
       <div className="max-w-2xl mx-auto flex items-center justify-between">
         <div>
           <h1 className="text-4xl font-bold mb-4">Welcome InclusiveCommTech</h1>
           <p className="text-lg mb-8">
-            Bridging Gaps for PWDs and Underserved Communities.
+            Bridging Gaps for Peoaple With Disabilitties and Underserved Communities.
           </p>
           <a
             href="#"
-            className="bg-blue-500 text-white font-bold rounded-full py-3 px-6 hover:bg-blue-700 hover:text-white"
+            className="bg-blue text-white font-bold rounded-full py-3 px-6 hover:bg-blue-700 hover:text-white"
           >
             Get Started
           </a>
         </div>
         <div>
           <img
-            src="/close-up-team-hand-shake.jpeg" 
+            src="/your-image.jpg" // Replace with the actual image source
             alt="Landing Page Image"
             className="w-full h-auto max-w-md"
           />
