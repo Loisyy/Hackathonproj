@@ -19,10 +19,30 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <h1 className="text blue text-[6em] items-center flex m-auto text-center ">this is the landing page</h1>
+    <div className="bg-deep-purple-500 text-light-gray-100 p-8">
+      <div className="max-w-2xl mx-auto flex items-center justify-between">
+        <div>
+          <h1 className="text-4xl font-bold mb-4">Welcome InclusiveCommTech</h1>
+          <p className="text-lg mb-8">
+            Bridging Gaps for PWDs and Underserved Communities.
+          </p>
+          <a
+            href="#"
+            className="bg-blue-500 text-white font-bold rounded-full py-3 px-6 hover:bg-blue-700 hover:text-white"
+          >
+            Get Started
+          </a>
+        </div>
+        <div>
+          <img
+            src="/close-up-team-hand-shake.jpeg" 
+            alt="Landing Page Image"
+            className="w-full h-auto max-w-md"
+          />
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
 export default page
