@@ -34,11 +34,18 @@ const page = () => {
           </a>
         </div>
         <div>
+
+          {/* @lois it can be done this way but will throw a warning like the yellow  */}
+          {/* underlines below to get rid of that you can use the Image tag from nextjs  */}
           <img
-            src="/close-up-team-hand-shake.jpeg" 
+            src="/close-up-team-hand-shake.jpg" 
             alt="Landing Page Image"
             className="w-full h-auto max-w-md"
           />
+
+          {/* this way:::: */}
+
+          <Image alt="image" src='/close-up-team-hand-shake.jpg' width={500} height={500} />
         </div>
       </div>
     </div>
