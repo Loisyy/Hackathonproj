@@ -4,8 +4,8 @@ import Navbar from "@/componenets/navbar";
 import HeroSection from "@/componenets/herosection";
 import React from 'react'
 
-// import MultiModalClientfrom
-// import RealTimeTranslationfrom
+import MultiModalClient from "@/src/app/multimodalclient";
+import RealTimeTranslation from "@src/app/realtimetranslation";
 
 // import AccessibilitySettingsfrom "../../components/accessibilitysettings";
 // import AssistiveTechnologiesIntegrationfrom "../../components/assistivetechnologiesintegration";
@@ -17,32 +17,36 @@ import React from 'react'
 
 
 
-const page = () => {
+const LandingPage = () => {
   return (
     <div className="bg-deepPurple text-lightGray p-8">
       <div className="max-w-2xl mx-auto flex items-center justify-between">
         <div>
           <h1 className="text-4xl font-bold mb-4">Welcome InclusiveCommTech</h1>
           <p className="text-lg mb-8">
-            Bridging Gaps for Peoaple With Disabilitties and Underserved Communities.
+            Bridging Gaps for People With Disabilities and Underserved
+            Communities.
           </p>
           <a
-            href="#"
+            href="/signup"
             className="bg-blue text-white font-bold rounded-full py-3 px-6 hover:bg-blue-700 hover:text-white"
           >
             Get Started
           </a>
         </div>
         <div>
-          <img
-            src="/your-image.jpg" // Replace with the actual image source
-            alt="Landing Page Image"
-            className="w-full h-auto max-w-md"
+          {/* Use the Image component for better optimization */}
+          <Image
+            alt="image"
+            src="/close-up-team-hand-shake.jpg"
+            width={500}
+            height={500}
+            className="rounded-md shadow-lg"
           />
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default page
+export default LandingPage;

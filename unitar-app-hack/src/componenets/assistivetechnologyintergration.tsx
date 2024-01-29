@@ -1,4 +1,3 @@
-// components/AssistiveTechnologiesIntegration.tsx
 import React, { useState } from "react";
 
 interface AssistiveTechnologiesIntegrationProps {
@@ -13,39 +12,52 @@ const AssistiveTechnologiesIntegration: React.FC<
     useState<boolean>(false);
   const [isVoiceRecognitionSetUp, setIsVoiceRecognitionSetUp] =
     useState<boolean>(false);
+  const [isScreenReaderCheckLoading, setIsScreenReaderCheckLoading] =
+    useState<boolean>(false);
+  const [isVoiceRecognitionSetupLoading, setIsVoiceRecognitionSetupLoading] =
+    useState<boolean>(false);
 
-  const runScreenReaderCompatibilityCheck = () => {
+  const runScreenReaderCompatibilityCheck = async () => {
+    setIsScreenReaderCheckLoading(true);
     // Simulate a compatibility check, replace with actual logic
     const compatibilityResult =
       /* Your logic to check screen reader compatibility */ true;
     setIsScreenReaderCompatible(compatibilityResult);
     onScreenReaderCompatibility(compatibilityResult);
+    setIsScreenReaderCheckLoading(false);
   };
 
-  const runVoiceRecognitionSetup = () => {
+  const runVoiceRecognitionSetup = async () => {
+    setIsVoiceRecognitionSetupLoading(true);
     // Simulate a setup guide, replace with actual logic
     const setupResult = /* Your logic for voice recognition setup */ true;
     setIsVoiceRecognitionSetUp(setupResult);
     onVoiceRecognitionSetup(setupResult);
+    setIsVoiceRecognitionSetupLoading(false);
   };
 
   return (
-    <div className="container mx-auto mt-8 p-8 bg-white shadow-lg rounded-md">
+    <div className="container mx-auto mt-8 p-8 bg-lightGray shadow-lg rounded-md text-darkGray">
       {/* Screen Reader Compatibility Check */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">
+        <h2 className="text-3xl font-bold mb-6 text-deepPurple">
           Screen Reader Compatibility Check
         </h2>
         <button
           onClick={runScreenReaderCompatibilityCheck}
-          className="bg-blue-500 text-white p-2 rounded-md"
+          className={`bg-blue text-white p-3 rounded-md hover:bg-blue-700 transition ${
+            isScreenReaderCheckLoading && "opacity-50 cursor-not-allowed"
+          }`}
+          disabled={isScreenReaderCheckLoading}
         >
-          Run Compatibility Check
+          {isScreenReaderCheckLoading
+            ? "Checking..."
+            : "Run Compatibility Check"}
         </button>
         <p
-          className={
+          className={`mt-4 ${
             isScreenReaderCompatible ? "text-green-500" : "text-red-500"
-          }
+          }`}
         >
           {isScreenReaderCompatible
             ? "Screen reader compatibility: Compatible"
@@ -55,19 +67,22 @@ const AssistiveTechnologiesIntegration: React.FC<
 
       {/* Voice Recognition Setup Guide */}
       <section>
-        <h2 className="text-2xl font-bold mb-4">
+        <h2 className="text-3xl font-bold mb-6 text-deepPurple">
           Voice Recognition Setup Guide
         </h2>
         <button
           onClick={runVoiceRecognitionSetup}
-          className="bg-blue-500 text-white p-2 rounded-md"
+          className={`bg-blue text-white p-3 rounded-md hover:bg-blue-700 transition ${
+            isVoiceRecognitionSetupLoading && "opacity-50 cursor-not-allowed"
+          }`}
+          disabled={isVoiceRecognitionSetupLoading}
         >
-          Run Setup Guide
+          {isVoiceRecognitionSetupLoading ? "Setting up..." : "Run Setup Guide"}
         </button>
         <p
-          className={
+          className={`mt-4 ${
             isVoiceRecognitionSetUp ? "text-green-500" : "text-red-500"
-          }
+          }`}
         >
           {isVoiceRecognitionSetUp
             ? "Voice recognition setup: Completed"
