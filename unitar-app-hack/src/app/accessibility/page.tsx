@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import React, { useState } from "react";
 //import { Link } from "react-router-dom"; // Import Link from react-router-dom
 //import AssistiveTechnologiesIntegration from "@../components/assistivetechnologiesintegration";
@@ -101,13 +102,13 @@ const AccessibilitySettings: React.FC<AccessibilitySettingsProps> = ({
 
           {/* Link to Assistive Technologies Integration page */}
            {/* <AssistiveTechnologiesIntegration /> */}
-          <div className="flex items-center">
-            {/* <Link
-              to="/assistivetechnologies"
+          <div className="flex items-center no-underline">
+            <Link
+              href="/assistive-tech"
               className="text-blue-500 underline"
             >
               Assistive Technologies Integration
-            </Link> */}
+            </Link>
           </div>
         </div>
       </section>

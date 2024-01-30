@@ -5,9 +5,9 @@ import HeroSection from "@/componenets/herosection";
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="container mx-auto mt-8 p-8 bg-lightGray shadow-lg rounded-md text-darkGray">
+    <div className="container mx-auto  p-8 bg-lightGray shadow-lg rounded-md text-darkGray">
+      
       <HeroSection />
-      <Navbar />
       {/* Overview Section */}
       <section className="mb-8">
         <h2 className="text-3xl font-bold mb-6 text-deepPurple">Overview</h2>

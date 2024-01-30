@@ -12,9 +12,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-deepPurple text-lightGray p-4">
-      <div className="max-w-2xl mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-4">
+    <nav className="bg-deepPurple text-lightGray flex justify-between">
+      <div className="max-w-2xl mx-auto items-center py-4 justify-between flex w-full">
+        <div className="items-center space-x-4 flex " >
           <Link href="/">
             <div className="text-lg font-semibold cursor-pointer mr-4">
               Home
@@ -35,7 +35,7 @@ const Navbar = () => {
         </div>
 
         {/* Hamburger Menu Button */}
-        <div className="lg:hidden flex items-center">
+        <div className="items-center bg-red-300 w-fit block p-4 sm:hidden">
           <button
             onClick={toggleMenu}
             className="text-lg font-semibold cursor-pointer"
@@ -46,7 +46,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-deepPurple text-lightGray flex flex-col items-center">
+          <div className="fixed top-0 left-0 w-full h-full bg-deepPurple text-lightGray flex flex-col items-center">
             <Link href="/">
               <div className="text-lg font-semibold cursor-pointer my-4">
                 Home

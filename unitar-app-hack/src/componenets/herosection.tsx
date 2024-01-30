@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-24 px-8 sm:px-16">
+    <div className="bg-gradient-to-r from-blue-500 to-indigo-500 text-black  px-8 sm:px-16">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center justify-center text-center">
           {/* Headline */}
@@ -26,13 +26,12 @@ const HeroSection: React.FC = () => {
           </a>
         </div>
 
-        {/* Illustrations/Imagery */}
         <img
            src="/close-up-team-hand-shake.jpg"
           alt="Illustration"
-          className="mt-16 mx-auto max-w-full h-auto"
+          className="mx-auto max-w-full h-auto"
           />
-        />
+        {/* Illustrations/Imagery */}
       </div>
     </div>
   );
