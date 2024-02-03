@@ -3,10 +3,10 @@ import React, { useState } from "react";
 
 const Signup = () => {
   return (
-    <div className="bg-orange text-darkGray p-8">
+    <div className=" bg-purple-900 text-white p-8">
       <div className="max-w-md mx-auto">
         <h1 className="text-2xl font-bold mb-4">
-          Sign Up for InclusiveCommTech
+          Sign Up for EqualAccess
         </h1>
         <form>
           <div className="mb-4">
@@ -53,7 +53,7 @@ const Signup = () => {
           </div>
           <button
             type="submit"
-            className="bg-deepPurple text-lightGray font-bold rounded-full py-3 px-6 hover:bg-deepPurple-700 hover:text-lightGray"
+            className="bg-deepPurple border border-white text-lightGray font-bold rounded-full py-3 px-6 hover:bg-deepPurple-700 hover:text-lightGray"
           >
             Sign Up
           </button>
